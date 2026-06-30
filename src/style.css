@@ -46,7 +46,7 @@ h1 span { color: #ffffff }
 
 section { padding: 8rem 5%; max-width: 1200px; margin: 0 auto; }
 h2 { font-size: 3rem; margin-bottom: 4rem; color: var(--text-dark); letter-spacing: -0.02em; }
-.section-label { font-size: 0.8rem; letter-spacing: 0.1em; color: var(--text-dark); margin-bottom: 0.5rem; display: block; font-weight: 600; }
+.section-label { font-size: 0.8rem; letter-spacing: 0.1em; color: var(--bg-app); margin-bottom: 0.5rem; display: block; font-weight: 600; }
 
 /* Seccion perfil */
 
