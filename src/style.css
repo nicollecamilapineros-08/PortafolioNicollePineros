@@ -154,7 +154,7 @@ h2 { font-size: 3rem; margin-bottom: 4rem; color: var(--text-dark); letter-spaci
     }
 
     .hero-media img {
-        object-position: center center; 
+        object-position: 80% center;
     }
 
     .horizontal-video-card {
@@ -207,7 +207,7 @@ h2 { font-size: 3rem; margin-bottom: 4rem; color: var(--text-dark); letter-spaci
     }
 
     .hero-media img {
-        object-position: center center; /* IMAGEN COMPLETAMENTE CENTRADA */
+        object-position: 80% center;
     }
 
     .hero-media::after {
@@ -339,7 +339,7 @@ h2 { font-size: 3rem; margin-bottom: 4rem; color: var(--text-dark); letter-spaci
     }
 
     .hero-media img {
-        object-position: center center;
+        object-position: 80% center;
     }
 
     .modal {
