@@ -1,13 +1,13 @@
-# Portfolio Profesional | Nicolle Camila Piñeros Castañeda
+# Portafolio Profesional | Nicolle Camila Piñeros Castañeda
 
 
 > **"Construyendo software con mentalidad de eficiencia industrial."**
 
-Bienvenido a mi repositorio del portafolio profesional. Este proyecto ha sido desarrollado con un enfoque minimalista, moderno y de alto rendimiento ("premium lifestyle"), diseñado específicamente para mostrar la convergencia entre la optimización de procesos de la ingeniería industrial y el desarrollo de software.
+Bienvenido a mi repositorio del portafolio profesional. Este proyecto ha sido desarrollado con un enfoque minimalista, moderno y de alto rendimiento.
 
 ---
 
-## 🚀 Características Clave
+##  Características Clave
 
 * **Diseño Web Vanilla:** Desarrollado utilizando únicamente código nativo (HTML5, CSS3 y JavaScript), evitando el uso de frameworks pesados o librerías externas para garantizar un rendimiento óptimo y una carga ultra veloz.
 * **Enfoque Mobile-First & Responsivo:** Adaptabilidad total en dispositivos de escritorio, tablets y móviles, con encuadres de imagen optimizados para mantener el foco visual.
