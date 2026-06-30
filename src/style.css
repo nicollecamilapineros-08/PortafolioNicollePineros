@@ -1,0 +1,371 @@
+:root {
+  --text-dark: #2D3748;
+  --bg-app: #F7FAFC;
+  --celeste: #B3D8E2;
+  --border: #E2E8F0;
+  --white: #FFFFFF;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; cursor: none; }
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  color: var(--celeste);
+  background-color: var(--bg-app);
+  scroll-behavior: smooth;
+  line-height: 1.6;
+  font-size: 18px;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, p, .subtitle, .section-label, .resume-entry li { transition: transform 0.3s ease-out; }
+h1:hover, h2:hover, h3:hover, h4:hover, p:hover, .subtitle:hover, .section-label:hover, .resume-entry li:hover { transform: translateX(5px); }
+h2, .section-label{ justify-content: center; align-items: center;}
+
+/* Barra de navegación */
+
+nav { display: flex; justify-content: space-between; align-items: center; padding: 1rem 2%; position: sticky; top: 0; background: rgba(194, 226, 246, 0.95); z-index: 100; backdrop-filter: blur(10px); }
+.logo { font-weight: 700; font-size: 1.2rem; font-family: Creato-ThinItalic; color: var(--text-dark); font-size: 25px;}
+.links a, .socials a { margin-left: 2rem; text-decoration: none; color: var(--text-dark); font-weight: 400; font-size: 15px; transition: color 0.3s, transform 0.3s; display: inline-block; font-family: Eternalo; font-size: 25px;}
+.links a:hover, .socials a:hover { color: var(--celeste); transform: translateY(-2px); }
+
+/* Banner inicial */
+
+header { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; position: relative; padding: 0 5%; text-align: left; }
+.hero-media { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; overflow: hidden; background-color: var(--text-dark); }
+.hero-media::after { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to right, rgba(45, 55, 72, 1) 0%, rgba(45, 55, 72, 0) 60%); }
+.hero-media img { width: 100%; height: 100%; object-fit: cover; object-position: center center; opacity: 1; }
+.subtitle {color: var(--white); font-family: Eternalo;}
+h1 { font-size: 3.5rem; letter-spacing: -0.05em; margin-bottom: 2rem; line-height: 1.1; color: #8bbeff; max-width: 900px; font-style: italic; }
+h1 span { color: #ffffff }
+.hero-desc { font-size: 1.25rem; margin-bottom: 3rem; max-width: 700px; color: var(--text-dark); opacity: 0.8; }
+.btn-primary { background: var(--text-dark); color: var(--white); padding: 1rem 2.5rem; border-radius: 50px; text-decoration: none; font-weight: 600; margin: 0.5rem; transition: transform 0.2s; }
+.btn-primary:hover { transform: translateY(-5px); }
+.btn-secondary { background: rgba(0,0,0,0.1); color: var(--bg-app); padding: 1rem 2.5rem; border-radius: 50px; text-decoration: none; font-weight: 600; margin: 0.5rem; transition: transform 0.2s; }
+.btn-secondary:hover { transform: translateY(-5px); }
+
+section { padding: 8rem 5%; max-width: 1200px; margin: 0 auto; }
+h2 { font-size: 3rem; margin-bottom: 4rem; color: var(--text-dark); letter-spacing: -0.02em; }
+.section-label { font-size: 0.8rem; letter-spacing: 0.1em; color: var(--text-dark); margin-bottom: 0.5rem; display: block; font-weight: 600; }
+
+/* Seccion perfil */
+
+#sobre-mi {margin-top: 1px;}
+
+.cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 2fr)); gap: 1rem; }
+.horizontal-video-card { grid-column: 1 / -1; display: flex; gap: 2rem; align-items: center; }
+.horizontal-video-card .tall-video { width: 50%; border-radius: 10px; aspect-ratio: 16 / 9; object-fit: contain; background: #000; }
+.horizontal-video-card .video-content { width: 50%; display: flex; flex-direction: column; gap: 1rem; }
+.card { background: var(--celeste); padding: 3rem; border-radius: 20px; border: 1px solid var(--border); transition: transform 0.3s; color: var(--text-dark);}
+.card:hover { transform: translateY(-5px); box-shadow: #2D3748;}
+
+
+/* Sección de proyectos */
+
+.proyectos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 3rem; }
+.proyecto-card { background: var(--celeste); color: #2D3748; padding: 1.5rem; border-radius: 20px; border: 1px solid var(--border); transition: transform 0.3s; display: flex; flex-direction: column; gap: 0.2rem; }
+.proyecto-card:hover { transform: translateY(-5px); }
+.proyecto-card .tags { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1rem; }
+.proyecto-card .tags span { background: var(--text-dark); padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.8rem; color: var(--bg-app); }
+.proyecto-card h3 { color: var(--text-dark); }
+.proyecto-card a { color: var(--text-dark); font-weight: 600; text-decoration: none; }
+.preview-img { width: 100%; height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 1rem; }
+
+/* Sección de mi formación y experiencia */
+
+#resume { padding: 4rem 5%; background-color: var(--text-dark); color: var(--white); max-width: none; }
+#resume h2 { color: var(--white); }
+.resume-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; max-width: 1200px; margin: 0 auto; }
+.resume-col { position: relative; }
+.resume-col::before {
+  content: '';
+  position: absolute;
+  left: 0.5rem;
+  top: 4rem;
+  bottom: 0;
+  width: 2px;
+  background: var(--celeste);
+}
+
+.resume-section { margin-bottom: 3rem; position: relative; color: var(--white); }
+.resume-section h3 { color: var(--celeste); margin-bottom: 1.5rem; margin-left: 2rem; }
+.resume-entry { position: relative; padding-left: 1rem; margin-bottom: 2rem; }
+.resume-entry .circle {
+  position: absolute;
+  left: -1.5rem;
+  top: 0.2rem;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background: var(--text-dark);
+  border: 2px solid var(--white);
+}
+.resume-entry h4 { color: var(--white); margin-bottom: 0.25rem; }
+.resume-entry p { margin-bottom: 0.5rem; }
+.resume-entry ul { list-style: disc; margin-left: 1.5rem; }
+
+/* Responsive  */
+
+@media (max-width: 768px) {
+  .resume-grid { grid-template-columns: 1fr; }
+}
+
+.modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(69, 137, 163, 0.9); z-index: 1000; justify-content: center; align-items: center; }
+.modal video { width: 80%; }
+.close-modal { position: absolute; top: 2rem; right: 2rem; color: white; cursor: pointer; font-size: 3rem; }
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Sección de contacto */
+
+#contacto { background-color: var(--text-dark); color: var(--white); padding: 4rem 5%; text-align: center; max-width: none; }
+#contacto h2 { color: var(--white); }
+#contacto .section-label { color: var(--celeste); }
+#contacto .btn-secondary { background: var(--celeste); color: var(--text-dark); }
+
+/* Cursor  */
+
+.custom-cursor { position: fixed; width: 30px; height: 30px; border-radius: 50%; background-color: transparent; pointer-events: none; z-index: 9999; transform: translate(-50%, -50%); transition: all 0.1s ease-out; border: 1px solid rgba(14, 57, 70, 0.1);}
+.cursor-light-bg { box-shadow: 0 0 30px 20px rgba(0, 0, 0, 0.3); }
+.cursor-dark-bg { box-shadow: 0 0 30px 20px rgba(255, 255, 255, 0.3); }
+
+/* Tablet */
+
+@media (max-width: 1024px) {
+    body {
+        font-size: 17px;
+    }
+
+    h1 {
+        font-size: 2.8rem;
+    }
+
+    header {
+        min-height: 80vh;
+    }
+
+    .hero-media img {
+        object-position: center center; 
+    }
+
+    .horizontal-video-card {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 2rem;
+    }
+
+    .horizontal-video-card .tall-video,
+    .horizontal-video-card .video-content {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+    /* Desactivar cursor personalizado */
+    .custom-cursor {
+        display: none !important;
+    }
+    * {
+        cursor: auto !important;
+    }
+
+    /* Navegación */
+    nav {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1.5rem 5%;
+        text-align: center;
+    }
+
+    .links a, .socials a {
+        margin: 0 0.7rem;
+        font-size: 18px;
+    }
+
+    /* Banner Inicial (Hero) centrado */
+    header {
+        height: auto;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8rem 5% 4rem 5%;
+        text-align: center;
+    }
+
+    .hero-media img {
+        object-position: center center; /* IMAGEN COMPLETAMENTE CENTRADA */
+    }
+
+    .hero-media::after {
+        background: linear-gradient(to bottom, rgba(45, 55, 72, 0.9) 0%, rgba(45, 55, 72, 0.7) 100%);
+    }
+
+    /* Cuadro de texto agrupado arriba */
+    .hero-text-box {
+        width: 100%;
+        max-width: 90%;
+        background: rgba(45, 55, 72, 0.8);
+        backdrop-filter: blur(6px);
+        padding: 20px 15px;
+        border-radius: 15px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        z-index: 2;
+        margin-bottom: auto; 
+    }
+
+    .hero-text-box .section-label {
+        font-size: 0.75rem;
+        color: #FFFFFF;
+        letter-spacing: 0.05em;
+        margin-bottom: 0.8rem;
+        display: block;
+    }
+
+    h1 {
+        font-size: 1.7rem;
+        line-height: 1.3;
+        color: #8bbeff; 
+        background: none !important;
+        backdrop-filter: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    
+    h1 span {
+        color: #ffffff;
+    }
+
+    /* Contenedor de botones abajo */
+
+    .buttons-container {
+        width: 100%;
+        max-width: 300px;
+        margin-top: 15rem; 
+        z-index: 2;
+    }
+
+    /* Secciones generales */
+
+    section {
+        padding: 4rem 5%;
+    }
+
+    h2 {
+        font-size: 2.2rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .cards-grid, .proyectos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .proyecto-card {
+        padding: 1.2rem;
+    }
+
+    .modal {
+        background: #000000 !important; /* Fondo negro absoluto */
+        backdrop-filter: none !important; /* Quitamos el blur para que no se filtre color azul */
+    }
+
+    /* La caja interna se vuelve transparente y se estira para no recortar */
+
+    .modal-content {
+        position: relative;
+        background-color: transparent !important; /* Eliminamos el fondo gris anterior */
+        border: none !important;                 /* Quitamos el borde */
+        padding: 0 !important;
+        width: 100% !important;                  /* Ocupa el ancho completo de la pantalla */
+        max-width: 100% !important;
+        height: auto !important; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Video en formato horizontal */
+
+    .modal video, #modal-video {
+        width: 100% !important;
+        height: auto !important;
+        aspect-ratio: 16 / 9 !important; /* Mantiene la proporción horizontal fija */
+        object-fit: contain !important;  /* Encaja el video original entero sin estirarse */
+        background-color: #000000 !important; /* Si queda espacio, se rellena de negro */
+        border-radius: 0px !important;    /* En móvil se ve mejor recto si toca los bordes */
+        display: block;
+    }
+
+    .close-modal {
+        position: absolute;
+        top: 2rem;
+        right: 1.5rem;
+        color: #FFFFFF !important;
+        font-size: 3rem;
+        z-index: 1001; /* Asegura que quede por encima del video */
+        opacity: 0.8;
+    }
+}
+
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .links a, .socials a {
+        font-size: 14px;
+        margin: 0 0.3rem;
+    }
+
+    .btn-primary, .btn-secondary {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin: 0.5rem 0;
+    }
+
+    .hero-media img {
+        object-position: center center;
+    }
+
+    .modal {
+        background: #000000 !important;
+    }
+
+    .modal-content {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+        background-color: transparent !important;
+        border: none !important;
+    }
+
+    .modal video, #modal-video {
+        width: 100% !important;
+        height: auto !important;
+        aspect-ratio: 16 / 9 !important; /* Mantiene el rectángulo horizontal intacto */
+        object-fit: contain !important;  /* Ajusta el video al ancho, dejando franjas negras arriba/abajo */
+        background-color: #000000 !important;
+    }
+
+    .close-modal {
+        top: 1rem;
+        right: 1rem;
+        font-size: 2.2rem;
+        opacity: 0.9;
+    }
+}

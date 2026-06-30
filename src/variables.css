@@ -1,0 +1,81 @@
+/* Importacion de fuentes */
+
+/* Creato */
+
+@font-face {
+    font-family: "Creato-Black";
+    src: url(./fuentes/Creato/CreatoDisplay-Black.otf);
+}
+
+@font-face {
+    font-family: "Creato-Black-italic";
+    src: url(./fuentes/Creato/CreatoDisplay-BlackItalic.otf);
+}
+
+@font-face {
+    font-family: "Creato-Bold";
+    src: url(./fuentes/Creato/CreatoDisplay-Bold.otf);
+}
+
+@font-face {
+    font-family: "Creato-BoldItalic";
+    src: url(./fuentes/Creato/CreatoDisplay-BoldItalic.otf);
+}
+
+@font-face {
+    font-family: "Creato-Extra-Bold";
+    src: url(./fuentes/Creato/CreatoDisplay-ExtraBold.otf);
+}
+
+@font-face {
+    font-family: "Creato-Extra-BoldItalic";
+    src: url(./fuentes/Creato/CreatoDisplay-ExtraBoldItalic.otf);
+}
+
+@font-face {
+    font-family: "Creato-Light";
+    src: url(./fuentes/Creato/CreatoDisplay-Light.otf);
+}
+
+@font-face {
+    font-family: "Creato-LightItalic";
+    src: url(./fuentes/Creato/CreatoDisplay-LightItalic.otf);
+}
+
+
+@font-face {
+    font-family: "Creato-Medium";
+    src: url(./fuentes/Creato/CreatoDisplay-Medium.otf);
+}
+
+@font-face {
+    font-family: "Creato-MediumItalic";
+    src: url(./fuentes/Creato/CreatoDisplay-MediumItalic.otf);
+}
+
+@font-face {
+    font-family: "Creato-Regular";
+    src: url(./fuentes/Creato/CreatoDisplay-Regular.otf);
+}
+
+@font-face {
+    font-family: "Creato-RegularItalic";
+    src: url(./fuentes/Creato/CreatoDisplay-RegularItalic.otf);
+}
+
+@font-face {
+    font-family: "Creato-Thin";
+    src: url(./fuentes/Creato/CreatoDisplay-Thin.otf);
+}
+
+@font-face {
+    font-family: "Creato-ThinItalic";
+    src: url(./fuentes/Creato/CreatoDisplay-ThinItalic.otf);
+}
+
+/* Eternalo */
+
+@font-face {
+    font-family: "Eternalo";
+    src: url(./fuentes/Eternalo/Eternalo.ttf);
+}
